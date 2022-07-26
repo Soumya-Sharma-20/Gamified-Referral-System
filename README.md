@@ -15,5 +15,5 @@ Here , on every recommendation 20 diamonds are provided to the user who has reco
 ![Screenshot (130)](https://user-images.githubusercontent.com/82909875/181099042-07ce204d-cb56-4d4b-873c-2afd4370e78c.png)
 
 
-Tech Stack : Python Django Framework, HTML, CSS , Tailwind-CSS , Database: sqlite3
+Tech-Stack : Python Django Framework, HTML, CSS , Tailwind-CSS , Database: sqlite3
 
