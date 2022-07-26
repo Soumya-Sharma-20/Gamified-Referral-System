@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gamefied Referral System | {% block title %} {% endblock title %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Balsamiq+Sans&family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Mochiy+Pop+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Mochiy Pop One', sans-serif;
+        }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-600">
+    <nav class="flex items-center justify-between px-4 py-6 bg-teal-800">
+        <div>
+            <a href="/" class="text-xl text-white">Gamefied Referral System</a>
+        </div>
+
+        <div class="flex item-center space-x-4">
+            {% if request.user.is_authenticated %}
+                <a href="/profiles/" class="text-white hover:text-gray-200">Profiles</a>
+                <a href="/logout/" class="px-5 rounded-xl text-white bg-teal-600 hover:bg-teal-700">Log out</a>
+            {% else %}
+                <a href="/login/" class="text-white hover:text-gray-200">Log In</a>
+                <a href="/signup/" class="px-5 rounded-xl text-white bg-teal-600 hover:bg-teal-700">Sign In</a>
+            {% endif %}
+        </div>
+    </nav>
+    
+    {% block content %}
+    {% endblock content %}
+
+</body>
+</html>

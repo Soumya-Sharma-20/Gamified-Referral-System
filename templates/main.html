@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+
+    <div class="p-10 lg:p-20 text-center">
+        <h1 class="text-3xl lg:text-6xl text-white">Referral System</h1>
+    </div>
+
+    {% if request.user.is_authenticated %}
+        <div class="p-10 lg:p-20 text-center">
+            <h5 class="text-3xl lg:text-6xl text-white">Welcome {{request.user}} !</h5>
+            <p class="text-xl pt-10 pb-2 text-center text-white">Copy the referral code : {{request.user.referral_code.code}}</p>
+            <p class="text-xl p-2 text-center text-white"> and earn 20 diamonds with every recommendation!!!</p>
+        </div>
+        
+    {% else %}
+        <div class="p-10 lg:p-20 flex justify-center">
+            <a href="{% url 'signup-view' %}">
+                <button class="text-center px-5 py-3 rounded-xl text-white bg-teal-800 hover:bg-teal-700">Create an Account</button>
+            </a>
+        </div>
+    {% endif %}
+{% endblock content %}

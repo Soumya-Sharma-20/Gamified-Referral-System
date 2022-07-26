@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+My Recommendations
+{% endblock title %}
+
+{% block content %}
+    {% if my_recs %}
+        <h2 class="p-10 lg:p-10 text-xl lg:text-3xl text-black">You have been awarded {{rewards}} diamonds for referring the game to your friends !</h2>
+        <br>
+        <h3 class="p-10 lg:p-10 text-2xl lg:text-4xl text-white">My recommendations:</h3>
+            <ul class="list-inside list-disc">
+                {% for p in my_recs %}
+                    <li class="p-5 lg:p-20 text-2xl text-white leading-4">{{p.user}}</li>
+                {% endfor %}
+            </ul>
+    {% else %}
+        <h3 class="p-10 lg:p-10 text-2xl lg:text-4xl text-white">You didn't recommend anyone yet...</h3>
+    {% endif %}
+{% endblock content %}
