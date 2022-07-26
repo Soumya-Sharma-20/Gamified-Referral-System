@@ -11,9 +11,9 @@ It is a refer and earn system with deeplinks. A user adds the referral code with
 
 A reward is associated with every recommendation being provided to a friend.
 ![Screenshot (133)](https://user-images.githubusercontent.com/82909875/181099008-3cd797a0-b8dd-4edb-9b50-a6a0679ed57a.png)
+Here , on every recommendation 20 diamonds are provided to the user who has recommended.
 ![Screenshot (130)](https://user-images.githubusercontent.com/82909875/181099042-07ce204d-cb56-4d4b-873c-2afd4370e78c.png)
 
-Here , on every recommendation 20 diamonds are provided to the user who has recommended.
 
 Tech Stack : Python Django Framework, HTML, CSS , Tailwind-CSS , Database: sqlite3
 
